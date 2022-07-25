@@ -12,22 +12,6 @@ x = [xnew[0], xnew[1], xnew[2]]
 
 # Create your views here.
 def main(request):
-    # print("vallllllllllllllllllllll",xnew[2])
-    # labels = 'Sale', 'Purchase', 'bas'
-    # print("vxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",labels)
-    # # sizes = [random.randint(10,30), random.randint(30,50)]
-    # # explode = (0.1, 0)  # only "explode" the 2nd slice (i.e. 'Hogs')
-    # fig1, ax1 = plt.subplots()
-    # ax1.pie(x, labels=labels, autopct='%1.1f%%',
-    #         shadow=True, startangle=90)
-    # ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-    # plt.savefig('/savedModules/sale_purchase_peichart.png',dpi=100)
-    return render(request, 'index.html')
-
-def charts(request):
-    return render(request, 'charts.html')
-
-def indian(request):
     plt.figure(figsize=(5, 5))
     emotions_list = ['Neutral','Negative','Positive']
     colors = ['plum', 'pink', 'peachpuff','paleturquoise','thistle','lightsteelblue']
@@ -41,10 +25,39 @@ def indian(request):
     buf.seek(0)
     string = base64.b64encode(buf.read())
     uri =  urllib.parse.quote(string)
-    return render(request, 'investing_chart.html',{'data':uri})
+    # print("vallllllllllllllllllllll",xnew[2])
+    # labels = 'Sale', 'Purchase', 'bas'
+    # print("vxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",labels)
+    # # sizes = [random.randint(10,30), random.randint(30,50)]
+    # # explode = (0.1, 0)  # only "explode" the 2nd slice (i.e. 'Hogs')
+    # fig1, ax1 = plt.subplots()
+    # ax1.pie(x, labels=labels, autopct='%1.1f%%',
+    #         shadow=True, startangle=90)
+    # ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+    # plt.savefig('/savedModules/sale_purchase_peichart.png',dpi=100)
+    return render(request, 'index.html', {'data':uri})
 
-# def signup(request):
-#     return render(request, 'signup.html')
+def charts(request):
+    return render(request, 'charts.html')
+
+# def senti(request):
+#     plt.figure(figsize=(5, 5))
+#     emotions_list = ['Neutral','Negative','Positive']
+#     colors = ['plum', 'pink', 'peachpuff','paleturquoise','thistle','lightsteelblue']
+#     plt.pie(x, colors=colors, labels=emotions_list, autopct='%1.1f%%', startangle=90, pctdistance=0.85)
+#     plt.legend()
+#     plt.title("Outcome")
+#     fig = plt.gcf()
+#     #convert graph into dtring buffer and then we convert 64 bit code into image
+#     buf = io.BytesIO()
+#     fig.savefig(buf,format='png')
+#     buf.seek(0)
+#     string = base64.b64encode(buf.read())
+#     uri =  urllib.parse.quote(string)
+#     return render(request, 'index.html',{'data':uri})
+
+def indian(request):
+    return render(request, 'investing_chart.html')
 
 # def login(request):
 #     return render(request, 'signup.html')
