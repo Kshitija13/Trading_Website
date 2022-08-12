@@ -10,5 +10,7 @@ urlpatterns = [
     path('tables/', views.tables, name='tables'),
     path(r'login/', views.login1, name='login1'),
     path(r'grid/', views.crypto, name='crypto'),
+    path(r'form-common/', views.form, name='form'),
+    path(r'form-validation/', views.market, name='market'),
     # path(r'index/', views.back, name='back'),
 ]

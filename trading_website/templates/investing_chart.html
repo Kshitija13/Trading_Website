@@ -15,7 +15,7 @@
 		
 <!--Header-part-->
 <div id="header">
-  <h1><a href="dashboard.html">Stock Website</a></h1>
+  <h1><a href="{% url 'index' %}">Stock Website</a></h1>
 </div>
 <!--close-Header-part--> 
 
@@ -54,12 +54,10 @@
                 <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Market</span> <span class="label label-important">3</span></a>
                   <ul>
                     <li><a href="{% url 'in' %}">Indian Indices</a></li>
-                    <li><a href="form-validation.html">Stock Actions</a></li>
-                    <li><a href="form-wizard.html">Global Markets</a></li>
+                    <li><a href="{% url 'market' %}">World Market</a></li>
                   </ul>
                 </li>
     <li><a href="{% url 'tables' %}"><i class="icon icon-th"></i> <span>Tables</span></a></li>
-    <li><a href="{% url 'crypto' %}"><i class="icon icon-fullscreen"></i> <span>Crypto</span></a></li>
     <!-- <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Invest Now</span> <span class="label label-important">3</span></a>
       <ul>
         <li><a href="form-common.html">Basic Form</a></li>

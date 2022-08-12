@@ -80,6 +80,12 @@ def tables(request):
 def crypto(request):
     return render(request, 'grid.html')
 
+def form(request):
+    return render(request, 'form-common.html')
+
+def market(request):
+    return render(request, 'form-validation.html')
+
 
 
     
