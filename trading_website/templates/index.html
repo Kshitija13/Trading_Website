@@ -15,35 +15,11 @@
 
 <!--Header-part-->
 <div id="header">
-  <h1><a href="dashboard.html">Stock Website</a></h1>
+  <h1><a href="{% url 'index' %}">Stock Website</a></h1>
 </div>
 <!--close-Header-part--> 
 
-<!--top-Header-messaages-->
-<!-- <div class="btn-group rightzero"> <a class="top_message tip-left" title="Manage Files"><i class="icon-file"></i></a> <a class="top_message tip-bottom" title="Manage Users"><i class="icon-user"></i></a> <a class="top_message tip-bottom" title="Manage Comments"><i class="icon-comment"></i><span class="label label-important">5</span></a> <a class="top_message tip-bottom" title="Manage Orders"><i class="icon-shopping-cart"></i></a> </div> -->
-<!--close-top-Header-messaages--> 
-
 <!--top-Header-menu-->
-<div class="container">
-  <div id="user-nav" class="navbar navbar-inverse">
-    <ul class="nav">
-      <li class="" ><a title="" href="#"><i class="icon icon-user"></i> <span class="text">Profile</span></a></li>
-      <li class=" dropdown" id="menu-messages"><a href="#" data-toggle="dropdown" data-target="#menu-messages" class="dropdown-toggle"><i class="icon icon-envelope"></i> <span class="text">Messages</span> <span class="label label-important">5</span> <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a class="sAdd" title="" href="#">new message</a></li>
-          <li><a class="sInbox" title="" href="#">inbox</a></li>
-          <li><a class="sOutbox" title="" href="#">outbox</a></li>
-          <li><a class="sTrash" title="" href="#">trash</a></li>
-        </ul>
-      </li>
-      <li class=""><a title="" href="#"><i class="icon icon-cog"></i> <span class="text">Settings</span></a></li>
-      <li class=""><a title="" href="{% url 'login1' %}"><i class="icon icon-share-alt"></i> <span class="text">Login</span></a></li>
-    </ul>
-  </div>
-  <div id="search">
-    <input type="text" placeholder="Search here..."/>
-    <button type="submit" class="tip-left" title="Search"><i class="icon-search icon-white"></i></button>
-  </div>
 <!--close-top-Header-menu-->
 
   <div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i> Home</a><ul>
@@ -60,7 +36,6 @@
 
 <div id="content">
   <div id="content-header">
-    <div id="breadcrumb"> <a href="{% url 'index' %}" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a></div>
   </div>
   <div class="container-fluid">
    	<div class="quick-actions_homepage">
@@ -74,8 +49,7 @@
     <div class="row-fluid">
       <div class="widget-box">
         <div class="widget-title"><span class="icon"><i class="icon-tasks"></i></span>
-          <h5>Top Market Overview</h5>
-          <div class="buttons"><a href="#" class="btn btn-mini btn-success"><i class="icon-refresh"></i> Update stats</a></div>
+          <h5>Market Overview</h5>
         </div>
     <section id="first">
         <div class="invest" >
@@ -129,7 +103,6 @@
   <div class="lib">
     <img src="data:image/png;base64,{{ data }}" alt="" height="250" ,width="250">
   </div>
-  <iframe src="https://feed.mikle.com/widget/v2/156288/?preloader-text=Loading" height="502px" width="100%" class="fw-iframe" scrolling="no" frameborder="0"></iframe>
 </section>
 
 {% load static %}
